@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    top: 0;
+    left: 0;
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color:#fff;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.1;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header,form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+}
+
+form button {
+    color:#3c1053;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+form button:hover {
+    background:#ad5389;
+    color: white;
+    
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30vw;
+    list-style: none;
+
+}
+
+.todo {
+    margin: 00.5rem;
+    background: white;
+    color: #3c1053;
+    font-size: 1.5rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.delete-btn, .completed-btn {
+    background: #fff;
+    color: #228B22;
+    border: 4px solid #ad5389;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.delete-btn{
+    color:#FFDC00;
+}
+.completed-btn:hover {
+    background:#228B22;
+    color: #fff;
+}
+.delete-btn:hover {
+    background:#FFDC00;
+    color:#fff;
+}
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash-alt, .fa-check-square {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color:#ad5389;
+    width: 10rem;   
+    cursor: pointer;
+    padding: 0.75rem;
+}
+.select::after {
+    content:"\25BC";
+    position: absolute;
+    background:#ad5389;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+}
+
+.select:hover::after {
+    background: #fff;
+    color: #ad5389;
+}
